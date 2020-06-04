@@ -1,0 +1,38 @@
+      "module/date" = {
+        type             = "internal/date";
+        interval         = 30;
+        label            = " %time%";
+        label-padding    = 2;
+        label-background = shade2;
+        label-foreground = bg;
+        time             = " %I:%M %p";
+        time-alt         = " %Y-%m-%d";
+      };
+
+      "module/powermenu" = {
+        type               = "custom/text";
+        click-left         = "~/scripts/sysmenu";
+        enable-click       = true;
+        content            = "";
+        content-padding    = 2;
+        content-foreground = fg;
+      };
+
+      "module/volume" = {
+        type                     = "internal/alsa";
+
+        format-volume            = "<ramp-volume> <label-volume>";
+        format-volume-padding    = 2;
+        format-volume-foreground = fg;
+        format-volume-background = bg;
+
+        label-volume             = "%percentage%%";
+        label-muted              = " --%";
+        label-muted-foreground   = fg;
+        label-muted-background   = bg;
+        label-muted-padding      = 2;
+
+        ramp-volume-0 = "";
+        ramp-volume-1 = "";
+        ramp-volume-2 = "";
+      };
